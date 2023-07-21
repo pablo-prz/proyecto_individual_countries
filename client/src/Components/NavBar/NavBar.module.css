@@ -1,0 +1,38 @@
+.container {
+  background-color: rgba(246, 227, 195, 0.548);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1%;
+  height: 45px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-top: 5px double;
+  border-bottom: 5px double;
+  border-color: rgb(155, 128, 89);
+}
+.container select {
+  background-color: rgba(155, 128, 89, 0.719);
+  color: black;
+  margin-left: 10px;
+  font-size: small;
+  font-family: "Fjalla One", sans-serif;
+}
+.container button {
+  border: 1px solid black;
+  background: scroll;
+  color: black;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+  margin: 5px;
+}
+button:hover {
+  transform: scale(1.05);
+  background-color: rgba(195, 160, 107, 0.651);
+}
+.container input {
+  border: 2px solid black;
+  color: black;
+  background: scroll;
+  height: 30px;
+  width: 170%;
+}

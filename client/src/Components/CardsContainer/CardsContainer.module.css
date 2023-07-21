@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 2rem;
+  padding: 0rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.buttons {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 47%;
+  margin-left: 40%;
+}
+.buttons button {
+  background: scroll;
+  color: black;
+  border: 1px solid black;
+}

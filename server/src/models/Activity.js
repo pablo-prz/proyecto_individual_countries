@@ -13,14 +13,15 @@ module.exports = (Sequelize) => {
         },
         difficulty: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 1,
             validate: {
-                min: 1,
-                max: 5
+              min: 1,
+              max: 5,
             },
-            allowNull: true,
-        },
+          },
         duration: {
-            type: DataTypes.TIME,
+            type: DataTypes.INTEGER,
             allowNull: true,
         },
         season: {

@@ -3,7 +3,6 @@ const getCountries = require('../handlers/getCountries');
 const getCountryDetail = require('../handlers/getCountryDetail');
 const postActivities = require('../handlers/postActivities');
 const getActivities = require('../handlers/getActivities');
-
 const router = Router();
 
 router.get("/countries", getCountries);

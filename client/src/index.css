@@ -1,17 +1,24 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Fjalla One", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  background-image: url(https://img.freepik.com/vector-gratis/mapa-mundial-minimalista-diseno-vintage_23-2148304261.jpg?w=1380&t=st=1689884282~exp=1689884882~hmac=a7924b3abaf3ebb9b721097ca4c0e4ace36f8fbb6f269b3f8638ce1b5e14e848);
+  background-repeat: no-repeat;
+  background-size: 100%;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #24242493;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -27,8 +34,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -42,13 +47,13 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: "Fjalla One", sans-serif;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #000000;
 }
 button:focus,
 button:focus-visible {
@@ -57,11 +62,11 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #fdfdfd;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #80ff74;
   }
   button {
     background-color: #f9f9f9;

@@ -1,8 +1,14 @@
-const { Activity } = require('../db');
+const { Activity, Country } = require('../db');
 
 const getActivities = async (req, res) => {
     try {
-        const response = await Activity.findAll();
+        const response = await Activity.findAll({
+            include: {
+                model: Country,
+                attributes: ["name"],
+                through: { attributes: [] },
+            },
+        });
 
         if (response.length === 0) {
             return res.status(404).json({ error: "there are no existing activities" });

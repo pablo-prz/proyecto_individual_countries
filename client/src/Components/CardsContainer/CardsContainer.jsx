@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Card from "../Card/Card";
 import { useSelector } from "react-redux";
+import style from "./CardsContainer.module.css";
 
 const CardsContainer = () => {
-  const countries = useSelector((state) => state.countries);
+  const countries = useSelector((state) => {
+    return state.searchResult.length > 0 ? state.searchResult : state.countries;
+  });
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -23,11 +26,7 @@ const CardsContainer = () => {
   const renderPageNumbers = pageNumbers.map((number) => {
     if (number === currentPage) {
       return (
-        <button
-          key={number}
-          onClick={() => handlePageChange(number)}
-          style={{ fontWeight: "bold" }}
-        >
+        <button key={number} onClick={() => handlePageChange(number)}>
           {number}
         </button>
       );
@@ -42,12 +41,8 @@ const CardsContainer = () => {
     }
   });
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
-
   return (
-    <div>
+    <div className={style.container}>
       {currentItems.map((el) => (
         <Card
           key={el.id}
@@ -57,17 +52,15 @@ const CardsContainer = () => {
           continent={el.continent}
         />
       ))}
-      <div>
+      <div className={style.buttons}>
         {currentPage > 1 && (
-          <button onClick={() => handlePageChange(currentPage - 1)}>
-            Prev
-          </button>
+          <button onClick={() => handlePageChange(currentPage - 1)}>⬅</button>
         )}
+
         {renderPageNumbers}
+
         {currentPage < pageNumbers.length && (
-          <button onClick={() => handlePageChange(currentPage + 1)}>
-            Next
-          </button>
+          <button onClick={() => handlePageChange(currentPage + 1)}>➡</button>
         )}
       </div>
     </div>

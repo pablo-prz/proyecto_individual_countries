@@ -1,5 +1,6 @@
-const { Country } = require('../db');
+const { Country, Activity } = require('../db');
 const { Op } = require('sequelize');
+
 
 const getCountries = async (req, res) => {
     const { name } = req.query;
@@ -9,10 +10,19 @@ const getCountries = async (req, res) => {
             response = await Country.findAll({
                 where: {
                     name: { [Op.iLike]: `%${name}%` }
-                }
+                },
+                include: {
+                    model: Activity,
+                    through: { attributes: [] },
+                },
             });
         } else {
-            response = await Country.findAll();
+            response = await Country.findAll({
+                include: {
+                    model: Activity,
+                    through: { attributes: [] },
+                },
+            });
         }
         if (response.length === 0) {
             return res.status(404).json({ error: error.message });

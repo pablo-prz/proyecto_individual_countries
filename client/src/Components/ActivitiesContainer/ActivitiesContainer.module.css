@@ -1,0 +1,77 @@
+.container h1 {
+  align-items: center;
+  justify-content: center;
+  margin: 2%;
+  width: 100%;
+  text-decoration: underline;
+}
+.container button {
+  display: flex;
+  border: 1px solid black;
+  background: scroll;
+  color: black;
+  transition: transform 0.5s ease-in-out, background-color 0.3s;
+  margin: 2%;
+}
+button:hover {
+  transform: scale(1.09);
+  background-color: rgba(195, 160, 107, 0.651);
+}
+.container h1 {
+  display: flex;
+  align-items: center;
+}
+.cards {
+  background-color: rgba(155, 128, 89, 0.425);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0rem;
+  width: 100%;
+  margin-top: 20px;
+}
+.cards div {
+  width: max-content;
+}
+.cards li {
+  font-size: large;
+}
+.cards h2 {
+  font-size: x-large;
+  text-decoration: underline;
+}
+.countriesList {
+  text-align: left;
+}
+.countriesList ul {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(184, 151, 102, 0.685);
+  position: absolute;
+}
+.countriesList button {
+  border: 1px solid black;
+  background: scroll;
+  height: 30px;
+  width: 40px;
+  font-size: small;
+  color: black;
+}
+.noActs {
+  display: flex;
+  justify-content: center;
+}
+.noActs button {
+  border: 1px solid black;
+  background: scroll;
+  color: black;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: rgba(195, 160, 107, 0.651);
+}
