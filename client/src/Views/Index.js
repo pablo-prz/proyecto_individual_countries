@@ -4,5 +4,5 @@ import Detail from "./Detail/Detail";
 import Form from "./Form/Form";
 
 export {
-    Home, Landing, Detail, Form
+    Home, Landing, Detail, Form,
 }

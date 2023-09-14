@@ -10,19 +10,12 @@ const getCountries = async (req, res) => {
             response = await Country.findAll({
                 where: {
                     name: { [Op.iLike]: `%${name}%` }
-                },
-                include: {
+                }, include: {
                     model: Activity,
-                    through: { attributes: [] },
                 },
             });
         } else {
-            response = await Country.findAll({
-                include: {
-                    model: Activity,
-                    through: { attributes: [] },
-                },
-            });
+            response = await Country.findAll();
         }
         if (response.length === 0) {
             return res.status(404).json({ error: error.message });
