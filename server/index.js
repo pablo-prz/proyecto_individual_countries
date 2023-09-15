@@ -1,7 +1,7 @@
 const server = require("./src/server");
 const { conn } = require('./src/db.js');
 const loadDB = require("./loadDB");
-const port = process.env.PORT || 3001;
+const port = 3001;
 
 conn.sync({ force: true }).then(async () => {
   await loadDB();
