@@ -7,7 +7,7 @@ const {
   DB_USER, DB_PASSWORD, DB_HOST,
 } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`, {
+const sequelize = new Sequelize(`postgres://pablo:rXcglw8J155bZVmUf2qlQaF95jXPciAY@dpg-ck1rc0n03lhc73c9q22g-a/countries_yn7s`, {
   logging: false,
   native: false,
 });
