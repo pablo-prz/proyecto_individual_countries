@@ -9,7 +9,8 @@ import { getActivities, getCountries } from "./Redux/Actions";
 import { useEffect } from "react";
 import axios from "axios";
 
-axios.default.baseURL = "http://localhost:3001/";
+axios.default.baseURL =
+  "https://proyectoindividualcountries-production.up.railway.app/";
 
 function App() {
   const { pathname } = useLocation();
