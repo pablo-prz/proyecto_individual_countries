@@ -14,7 +14,7 @@ export const ACTIVITY_FILT = "ACTIVITY_FILT";
 export const getCountries = () => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get("http://localhost:3001/countries");
+            const apiData = await axios.get("/countries");
             const countries = apiData.data;
             dispatch({ type: GET_COUNTRIES, payload: countries })
         }
@@ -27,7 +27,7 @@ export const getCountries = () => {
 export const getCountryById = (id) => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get(`http://localhost:3001/countries/${id}`);
+            const apiData = await axios.get(`/countries/${id}`);
             const country = apiData.data;
             dispatch({ type: GET_COUNTRYBYID, payload: country })
 
@@ -39,7 +39,7 @@ export const getCountryById = (id) => {
 export const getCountriesByName = (name) => {
     return async function (dispatch) {
         try {
-            const apiData = await axios.get(`http://localhost:3001/countries?name=${name}`);
+            const apiData = await axios.get(`/countries?name=${name}`);
             const countries = apiData.data;
             dispatch({ type: SEARCH_COUNTRY, payload: countries })
         } catch (error) {
@@ -61,7 +61,7 @@ export const continentOrder = (payload) => {
 };
 export const getActivities = () => {
     return async function (dispatch) {
-        const apidata = await axios.get("http://localhost:3001/activities")
+        const apidata = await axios.get("/activities")
         const activities = apidata.data
         dispatch({ type: GET_ACTIVITIES, payload: activities })
     };
@@ -69,7 +69,7 @@ export const getActivities = () => {
 export const createActivity = (activity) => {
     return async function (dispatch) {
         try {
-            const newActiv = await axios.post("http://localhost:3001/activities", activity);
+            const newActiv = await axios.post("/activities", activity);
             dispatch({ type: CREATE_ACTIVITY, payload: newActiv })
         } catch (error) {
             console.log(error)
