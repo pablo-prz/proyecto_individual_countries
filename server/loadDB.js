@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { Country } from './src/db';
+const axios = require('axios');
+const { Country } = require('./src/db');
 
 const loadDB = async () => {
     const DBCountries = Country.findAll();

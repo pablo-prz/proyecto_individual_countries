@@ -1,12 +1,12 @@
-import server from "./src/server";
-import conn from './src/db.js';
-import loadDB from "./loadDB";
-
-const port = 3001;
+const axios = require("axios");
+const server = require("./src/server");
+const { conn } = require('./src/db.js');
+const loadDB = require("./loadDB");
+const PORT = 3001;
 
 conn.sync({ force: true }).then(async () => {
   await loadDB();
-  server.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+  server.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
   })
 }).catch(error => console.error(error))
