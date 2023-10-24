@@ -3,9 +3,9 @@ const { Sequelize } = require("sequelize");
 
 const fs = require('fs');
 const path = require('path');
-const {
+import {
   DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_DATABASE
-} = process.env;
+} from process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`, {
   logging: false,

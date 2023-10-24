@@ -1,6 +1,7 @@
-const server = require("./src/server");
-const { conn } = require('./src/db.js');
-const loadDB = require("./loadDB");
+import server from "./src/server";
+import conn from './src/db.js';
+import loadDB from "./loadDB";
+
 const port = 3001;
 
 conn.sync({ force: true }).then(async () => {
