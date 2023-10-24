@@ -9,7 +9,7 @@ import { getActivities, getCountries } from "./Redux/Actions";
 import { useEffect } from "react";
 import axios from "axios";
 
-axios.default.baseURL =
+axios.defaults.baseURL =
   "https://proyectoindividualcountries-production.up.railway.app/";
 
 function App() {
