@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import axios from "axios";
 
 axios.defaults.baseURL =
-  "https://proyecto-individual-countries-f4tc.vercel.app/";
+  "https://proyecto-individual-countries-f4tc-oda3uftxh-pablo-prz.vercel.app/";
 
 function App() {
   const { pathname } = useLocation();
