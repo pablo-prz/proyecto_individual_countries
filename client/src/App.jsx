@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Landing, Home, Detail, Form } from "./Views/Index";
 import Nav from "./Components/NavBar/NavBar";
 import "./App.css";
