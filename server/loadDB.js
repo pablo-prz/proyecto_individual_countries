@@ -4,7 +4,7 @@ const { Country } = require('./src/db');
 const loadDB = async () => {
     const DBCountries = Country.findAll();
     if (!DBCountries.length) {
-        const apiURL = await axios.get('http://localhost:5000/countries');
+        const apiURL = await axios.get(process.env.API_URL || 'http://localhost:5000/countries');
         const dataApi = await apiURL.data.map((el) => {
             return {
                 id: el.cca3,
