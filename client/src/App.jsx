@@ -9,7 +9,7 @@ import { getActivities, getCountries } from "./Redux/Actions";
 import { useEffect } from "react";
 import axios from "axios";
 
-axios.defaults.baseURL = "proyecto-individual-countries-f4tc.vercel.app/";
+axios.defaults.baseURL = "http://localhost:3001/";
 
 function App() {
   const { pathname } = useLocation();
